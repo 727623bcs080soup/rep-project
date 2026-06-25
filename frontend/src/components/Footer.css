@@ -1,0 +1,57 @@
+/* frontend/src/components/Footer.css */
+
+.main-footer {
+  width: 100%;
+  margin-top: auto; /* 4. This is an extra safeguard to push it down */
+  padding: 30px 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  /* 5. Prevent the footer itself from shrinking */
+  flex-shrink: 0; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #777;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-left .copyright {
+  color: #333;
+  font-weight: 500;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

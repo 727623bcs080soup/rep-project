@@ -1,0 +1,79 @@
+/* frontend/src/components/HomeNavbar.css */
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 30px;
+}
+
+.home-nav-links {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- THIS IS THE FIX --- */
+/* Selects the new <button> tags inside the nav */
+.home-nav-links button {
+  /* Reset button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit; /* Use the site's font */
+  cursor: pointer;
+
+  /* Re-apply old <a> tag styles */
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  padding-bottom: 20px; 
+  margin-bottom: -20px;
+  border-bottom: 2px solid transparent;
+}
+
+.home-nav-links button.active,
+.home-nav-links button:hover {
+  color: #0d0c22;
+  border-bottom-color: #0d0c22;
+}
+
+.home-nav-links button.active {
+  background-color: #f0f0f0;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+}
+/* --- END FIX --- */
+
+
+.filters-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filters-btn:hover {
+  border-color: #ddd;
+}
+
+.filters-btn svg {
+  stroke-width: 1.5;
+}

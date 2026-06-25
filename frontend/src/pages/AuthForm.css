@@ -1,0 +1,79 @@
+/* frontend/src/pages/AuthForm.css */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  /* ADDED: Smooth transition for box-shadow on focus */
+  transition: box-shadow 0.2s ease, border-color 0.2s ease; 
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #ea4c89; /* Pink border on focus */
+    box-shadow: 0 0 0 3px rgba(234, 76, 137, 0.15); /* Subtle pink glow */
+}
+
+
+.auth-form button {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ea4c89;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  /* Ensure button transition is defined */
+  transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+
+.auth-form button:hover {
+  background-color: #d93a77;
+}
+
+.auth-form button:active {
+    /* Subtle push-down effect on click */
+    transform: scale(0.99); 
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-form p a {
+  color: #ea4c89;
+  font-weight: 500;
+  text-decoration: none;
+}
+.auth-form p a:hover {
+  text-decoration: underline;
+}

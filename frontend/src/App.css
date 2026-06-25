@@ -1,0 +1,18 @@
+/* frontend/src/App.css */
+
+.App {
+  /* 1. Make the main app container a flex column */
+  display: flex;
+  flex-direction: column;
+  
+  /* 2. Force it to be at least as tall as the screen */
+  min-height: 100vh; 
+  
+  text-align: center;
+}
+
+main {
+  /* 3. Tell the main content area to grow and take up all available space */
+  flex-grow: 1;
+  width: 100%;
+}

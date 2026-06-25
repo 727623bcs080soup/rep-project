@@ -1,0 +1,65 @@
+/* frontend/src/components/SearchBar.css */
+/* This styles the new search bar in the hero section. */
+
+.search-form-hero {
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+  background-color: #f8f8f8;
+  border-radius: 99px; /* Fully rounded */
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  margin-top: 25px;
+  /* Added transition for smooth focus effect */
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.search-form-hero:focus-within {
+  background-color: #fff;
+  border-color: #ddd;
+  /* Subtle pink glow on focus */
+  box-shadow: 0 0 0 3px rgba(234, 76, 137, 0.1); 
+}
+
+.search-form-hero input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 15px 25px; /* Taller padding for a better look */
+  font-size: 16px;
+  outline: none;
+  min-width: 0;
+}
+
+/* Styles for the dropdown (Shots/Users) */
+.search-form-hero select {
+  border: none;
+  background: transparent;
+  padding-right: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  /* Separator line between dropdown and input */
+  border-left: 1px solid #e7e7e7; 
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.search-form-hero button {
+  background-color: #ea4c89; /* Pink search button */
+  border: none;
+  border-radius: 99px;
+  padding: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.search-form-hero button:hover {
+  background-color: #d93a77;
+}
+.search-form-hero button:active {
+    transform: scale(0.95); /* Push effect */
+}

@@ -1,0 +1,53 @@
+/* frontend/src/components/Notification.css */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 300px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3000;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transform: translateX(0); /* Start visible */
+}
+
+/* Specific styles for message types */
+.notification.success {
+  background-color: #28a745; /* Green for success */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error/wrong credentials */
+}
+
+.notification p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: 15px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* Class to make it disappear (used during transition) */
+.notification.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}

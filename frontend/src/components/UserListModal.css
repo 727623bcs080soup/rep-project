@@ -1,0 +1,95 @@
+/* frontend/src/components/UserListModal.css */
+
+/* Modal-overlay styles the dark background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* User-list-modal is the white box */
+.user-list-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section with Title and Close button */
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.user-list-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0d0c22; /* Ensures title is dark */
+}
+
+.user-list-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+/* The scrollable content area */
+.user-list-content {
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+/* Each user row */
+.user-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #0d0c22;
+  transition: background-color 0.2s;
+}
+
+.user-list-item:hover {
+  background-color: #f9f9fb;
+}
+
+.user-list-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #f0f0f0;
+}
+
+.user-list-name {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0d0c22 !important; /* Forces dark color */
+}
+
+/* --- THIS IS THE FIX --- */
+/* This style ensures the "empty" message is visible */
+.empty-list-msg {
+  text-align: center;
+  color: #6e6d7a; /* A visible gray color */
+  padding: 30px 20px;
+  font-size: 16px;
+}
+/* ------------------------ */

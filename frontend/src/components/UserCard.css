@@ -1,0 +1,28 @@
+/* frontend/src/components/UserCard.css */
+
+/* --- UPDATE .user-card --- */
+.user-card {
+  display: block; /* Make the link a block */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.user-card:hover {
+  border-color: #ddd;
+}
+/* --- END UPDATE --- */
+
+.user-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  margin: 0 auto 15px auto;
+}
+/* ... rest of file ... */

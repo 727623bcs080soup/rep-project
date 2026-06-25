@@ -1,0 +1,272 @@
+/* src/pages/ProfilePage.css */
+.profile-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* === Main Header Card === */
+.profile-header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.profile-avatar-lg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e7e7e9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.profile-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #0d0c22;
+}
+
+.hire-badge {
+  background-color: #0d0c22;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.profile-bio {
+  font-size: 16px;
+  color: #3d3d4e;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+
+/* === Stats (Followers, Following) === */
+.profile-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat.clickable {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: background-color 0.2s;
+}
+.stat.clickable:hover {
+  background-color: #f3f3f4;
+}
+
+.stat-count {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d0c22;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6e6d7a;
+}
+
+/* === Action Buttons (Follow, Hire, Edit) === */
+.profile-actions-row {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary, .btn-secondary, .btn-follow, .save-btn-primary, .cancel-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #ea4c89;
+  color: #fff;
+}
+.btn-primary:hover { background-color: #d93a77; }
+
+.btn-secondary, .cancel-btn {
+  background-color: #f3f3f4;
+  color: #0d0c22;
+}
+.btn-secondary:hover, .cancel-btn:hover { background-color: #e7e7e9; }
+
+.btn-follow {
+  background-color: #e7e7e9;
+  color: #0d0c22;
+}
+.btn-follow.following {
+  background-color: transparent;
+  border: 1px solid #dbdbde;
+  color: #6e6d7a;
+}
+
+/* === Edit Profile Form === */
+.profile-edit-form {
+  background-color: #f9f9fb;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  text-align: left;
+  border: 1px solid #e7e7e9;
+}
+
+.edit-bio-input {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #dbdbde;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+.edit-bio-input:focus {
+  outline: none;
+  border-color: #ea4c89;
+  box-shadow: 0 0 0 3px rgba(234, 76, 137, 0.15);
+}
+
+.edit-hireable-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d0c22;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.edit-hireable-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.save-btn-primary {
+  background-color: #ea4c89;
+  color: #fff;
+}
+.save-btn-primary:hover { background-color: #d93a77; }
+
+
+/* === Tabs (Shots, Saved) === */
+.profile-tabs {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #e7e7e9;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6e6d7a;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: #0d0c22;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ea4c89; /* Pink active line */
+  border-radius: 3px 3px 0 0;
+}
+
+.tab-count {
+  color: #9e9ea7;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+/* === Post Grid & Empty State === */
+.profile-content {
+  /* This container is here in case you want to add padding */
+}
+
+.empty-state {
+  grid-column: 1 / -1; /* Makes it span the full grid width */
+  text-align: center;
+  padding: 50px;
+  color: #9e9ea7;
+  font-size: 18px;
+  background-color: #f9f9fb;
+  border-radius: 12px;
+}
+
+/* === Admin Buttons === */
+.suspend-badge {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-admin {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.btn-admin.suspend { background-color: #ffc107; color: #333; }
+.btn-admin.suspend:hover { background-color: #e0a800; }
+
+.btn-admin.activate { background-color: #28a745; }
+.btn-admin.activate:hover { background-color: #218838; }
+
+.btn-admin.delete { background-color: #dc3545; }
+.btn-admin.delete:hover { background-color: #c82333; }

@@ -1,0 +1,48 @@
+/* frontend/src/pages/InboxPage.css */
+/* Create this new file */
+.inbox-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conversation-list {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.conversation-item:last-child {
+  border-bottom: none;
+}
+
+.conversation-item:hover {
+  background-color: #f8f8f8;
+}
+
+.convo-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.convo-details strong {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.convo-details p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}

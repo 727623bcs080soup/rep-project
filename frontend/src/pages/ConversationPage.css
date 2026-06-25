@@ -1,0 +1,41 @@
+/* src/pages/ConversationPage.css */
+.conversation-page {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.chat-header { padding: 15px 25px; border-bottom: 1px solid #e7e7e9; }
+.chat-header a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0d0c22; font-size: 16px; }
+.chat-header img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #e7e7e9; }
+.chat-window { flex: 1; padding: 25px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; background-color: #f9f9fb; }
+.chat-message { display: flex; align-items: flex-end; gap: 10px; max-width: 80%; }
+.chat-avatar { width: 32px; height: 32px; border-radius: 50%; background-color: #eee; margin-bottom: 5px; flex-shrink: 0; }
+
+.message-bubble {
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* PRESERVES NEWLINES */
+  word-wrap: break-word;
+}
+.message-bubble strong { color: inherit; }
+
+.chat-message.received { align-self: flex-start; }
+.chat-message.received .message-bubble { background-color: #fff; border: 1px solid #e7e7e9; color: #0d0c22; border-bottom-left-radius: 4px; }
+.chat-message.sent { align-self: flex-end; }
+.chat-message.sent .message-bubble { background-color: #ea4c89; color: #fff; border-bottom-right-radius: 4px; }
+
+.reply-form { display: flex; padding: 20px; background: #fff; border-top: 1px solid #e7e7e9; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+.reply-form input { flex: 1; padding: 12px 20px; border: 1px solid #dbdbde; border-radius: 99px; margin-right: 12px; outline: none; font-size: 15px; transition: border-color 0.2s, background-color 0.2s; }
+.reply-form input:focus { border-color: #ea4c89; }
+.reply-form input:disabled { background-color: #f9f9fb; cursor: not-allowed; color: #999; }
+.reply-form button { padding: 10px 24px; border: none; border-radius: 99px; background-color: #ea4c89; color: #fff; font-weight: 600; cursor: pointer; transition: background-color 0.2s; }
+.reply-form button:disabled { background-color: #e7e7e9; color: #999; cursor: not-allowed; }
+.reply-form button:hover:not(:disabled) { background-color: #d93a77; }

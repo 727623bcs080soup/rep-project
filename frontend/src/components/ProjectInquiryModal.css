@@ -1,0 +1,151 @@
+/* frontend/src/components/ProjectInquiryModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #777;
+  transition: all 0.2s ease;
+}
+.modal-close:hover {
+  background: #e7e7e7;
+}
+
+.modal-header {
+  padding: 25px 30px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.modal-avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f0f0f0; /* Placeholder for logo */
+  margin: 0 auto 10px auto;
+}
+.modal-header h3 {
+  margin: 0 0 5px 0;
+  color: #0d0c22;
+}
+.modal-header p {
+  margin: 0;
+  color: #6e6d7a;
+  font-size: 14px;
+}
+
+.inquiry-form {
+  padding: 25px 30px;
+  overflow-y: auto;
+}
+
+.inquiry-form label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #0d0c22;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.inquiry-form textarea,
+.inquiry-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbde;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+.inquiry-form textarea {
+  min-height: 120px;
+}
+
+.budget-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dbdbde;
+  border-radius: 8px;
+}
+.budget-input span {
+  padding-left: 12px;
+  font-size: 14px;
+  color: #6e6d7a;
+}
+.budget-input input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+/* Hide number input spinners */
+.budget-input input::-webkit-outer-spin-button,
+.budget-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.budget-input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.send-btn-primary {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ea4c89;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.send-btn-primary:disabled {
+  background-color: #f3a9c6;
+}
+
+.modal-error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}

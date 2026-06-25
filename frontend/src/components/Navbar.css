@@ -1,0 +1,114 @@
+/* frontend/src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- Left Section --- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Right Section (Auth) --- */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a, .nav-auth a, .nav-auth span {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --- Button Styles --- */
+.nav-button-login, .nav-button-signup, .nav-button-upload {
+  /* These styles define the button's shape, background, and hover effects */
+  padding: 10px 18px; 
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #1a1a2e;
+  border: 1px solid #1a1a2e;
+}
+
+/* --- FIX: Force White Text Color for Links Inside Buttons --- */
+/* This targets the <a> tag (Link component) specifically and sets its color */
+.nav-button-login, 
+.nav-button-signup, 
+.nav-button-upload {
+    color: #fff; /* Base setting */
+}
+
+.nav-button-login, 
+.nav-button-signup, 
+.nav-button-upload {
+    color: #fff !important; 
+}
+/* This ensures the nested <a> tag's color is white, winning the specificity war. */
+/* --- END FIX --- */
+
+
+.nav-button-login:hover,
+.nav-button-signup:hover,
+.nav-button-upload:hover {
+  background-color: #333;
+  border-color: #333;
+}
+/* --- End Button Styles --- */
+
+.nav-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
